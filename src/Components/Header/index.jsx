@@ -9,11 +9,23 @@ export const Header = () => {
     const [rightSideItems, setRightSideItems] = useState([]);
     const [logo, setLogo] = useState([]);
 
+    const [applyButtonData, setApplyButtonData] = useState([]);
+
     const builder = ImageUrlBuilder(sanityClient);
 
     const urlFor = (source) => {
         return builder.image(source);
     }
+
+    const fetchCtaData = async () => {
+        try {
+            const query = `*[_type == 'fixedCtas'][0]`;
+            const result = await sanityClient.fetch(query);
+            setApplyButtonData(result.applyButton);
+        } catch (error) {
+            console.error(error);
+        }
+    };
   
     const fetchData = async () => {
         try {
@@ -28,10 +40,11 @@ export const Header = () => {
     };
 
     useEffect(() => {
+        fetchCtaData();
         fetchData();
     }, []);
 
-    console.log(logo);
+    console.log(applyButtonData);
 
     return (
         <>
@@ -50,7 +63,7 @@ export const Header = () => {
                             })
                         )}
                     </ul>
-                    {logo && (
+                    {logo && logo.asset && (
                         <img className='logo' src={urlFor(logo.asset._ref).url()} />
                     )}
                     <ul className='right'>
@@ -67,6 +80,11 @@ export const Header = () => {
                         )}
                     </ul>
                 </nav>
+                {applyButtonData && (
+                    <button className='apply-button cta'>
+                        <a href={applyButtonData.url}>{applyButtonData.text}</a>
+                    </button>
+                )}
             </header>
         </>
     )

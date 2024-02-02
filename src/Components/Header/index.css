@@ -1,15 +1,15 @@
 .header {
     max-height: 100px;
-    height: 100px;
+    height: 90px;
     display: flex;
     align-items: center;
+    justify-content: center;
     width: auto;
-    padding-top: 1rem;
 }
 
 .header nav {
     display: flex;
-    width: 100vw;
+    width: 800px;
 }
 
 .header nav ul {
@@ -34,4 +34,22 @@
 
 .header nav img {
     max-width: 100px;
+}
+
+.apply-button {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #FFC600;
+    border: none;
+    padding: 1.5rem 3rem;
+    border-bottom-left-radius: 15px;
+}
+
+.apply-button a {
+    font-family: 'Mabry-Pro';
+    text-transform: uppercase;
+    font-size: large;
+    color: #000;
+    text-decoration: none;
 }
