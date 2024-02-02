@@ -5,7 +5,7 @@ export const App = () => {
     return (
         <>
             <Suspense>
-                <main>
+                <main className='page'>
                     <Header />
                 </main>
             </Suspense>
