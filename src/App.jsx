@@ -1,6 +1,5 @@
-import { Suspense } from "react"
-
-import { Header } from "./Components/Header"
+import { Suspense } from "react";
+import { Header } from "./Components/Header";
 
 export const App = () => {
     return (
