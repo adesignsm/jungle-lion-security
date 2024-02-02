@@ -25,7 +25,6 @@ export const QuoteBlock = () => {
 
     const handleCloseClick = () => {
         setCloseBlock(true);
-        console.log('hit')
     }
 
     return (

@@ -44,8 +44,6 @@ export const Header = () => {
         fetchData();
     }, []);
 
-    console.log(applyButtonData);
-
     return (
         <>
             <header className='header'>

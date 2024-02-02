@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { Header } from "./Components/Header";
-import { Ctas, QuoteBlock } from "./Components/QuoteBlock";
+import { QuoteBlock } from "./Components/QuoteBlock";
+import { Hero } from "./Components/Hero";
 
 export const App = () => {
     return (
@@ -9,6 +10,7 @@ export const App = () => {
                 <main>
                     <Header />
                     <QuoteBlock />
+                    <Hero />
                 </main>
             </Suspense>
         </>
