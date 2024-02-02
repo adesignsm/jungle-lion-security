@@ -1,0 +1,46 @@
+.quote-block {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #FFC600;
+    max-width: 300px;
+    border-top-right-radius: 15px;
+    transition: opacity 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+}
+
+.inactive {
+    opacity: 0;
+    margin-left: -1rem;
+    pointer-events: none;
+}
+
+.quote-block p {
+    font-size: small;
+}
+
+.quote-block .button-container {
+    display: flex;
+    gap: 5px;
+}
+
+.quote-block .button-container button {
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: .25rem;
+}
+
+.quote-block .button-container button a {
+    color: #000;
+    text-decoration: none;
+}
+
+.close-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-container img {
+    cursor: pointer;
+}
