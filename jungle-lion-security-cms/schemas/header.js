@@ -46,6 +46,32 @@ export default {
                         }
                     ],
                     validation: Rule => Rule.max(3)
+                },
+                {
+                    name: "rightSideItems",
+                    title: "Right Side Items",
+                    type: "array",
+                    description: "Add, remove, or update menu items that will appear on the right side of your logo.",
+                    of: [
+                        {
+                            type: "object",
+                            fields: [
+                                {
+                                    name: "menuItemString",
+                                    title: "Menu Item String",
+                                    type: "string",
+                                    description: "The text for the menu item."
+                                },
+                                {
+                                    name: "menuItemAnchor",
+                                    title: "Menu Item Anchor",
+                                    type: "slug",
+                                    description: "This field is used to anchor to a section on the home page e.g 'services' will scroll down to the 'services' section.",
+                                }
+                            ]
+                        }
+                    ],
+                    validation: Rule => Rule.max(3)
                 }
             ]
         }        
