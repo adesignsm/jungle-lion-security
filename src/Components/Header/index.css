@@ -1,10 +1,12 @@
 .header {
+    position: fixed;
     max-height: 100px;
     height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: auto;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .header nav {
@@ -42,14 +44,14 @@
     right: 0;
     background-color: #FFC600;
     border: none;
-    padding: 1.5rem 3rem;
+    padding: 1rem 2rem;
     border-bottom-left-radius: 15px;
 }
 
 .apply-button a {
     font-family: 'Mabry-Pro';
     text-transform: uppercase;
-    font-size: large;
+    font-size: medium;
     color: #000;
     text-decoration: none;
 }
