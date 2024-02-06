@@ -3,6 +3,7 @@ import fixedBg from './fixedBg';
 import fixedCtas from './fixedCtas';
 import hero from './hero';
 import postHero from './postHero';
+import services from './services';
 
 export const schemaTypes = [
     header,
@@ -10,4 +11,5 @@ export const schemaTypes = [
     fixedCtas,
     hero,
     postHero,
+    services,
 ]
