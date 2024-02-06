@@ -27,7 +27,7 @@ export const PostHero = () => {
         fetchData();
     }, []);
 
-    console.log(data);
+    // console.log(data);
 
     return (
         <>
@@ -36,7 +36,7 @@ export const PostHero = () => {
                     <h1>{data.text}</h1>
                 )}
                 <div className='clients-container'>
-                    {data && data.clients.length > 0 && (
+                    {data && data.clients && data.clients.length > 0 && (
                         data.clients.map((client) => {
                             return (
                                 <img key={client._key} src={urlFor(client.clientLogo.asset._ref).url()} />
