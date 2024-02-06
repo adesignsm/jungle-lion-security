@@ -4,6 +4,8 @@ import ImageUrlBuilder from '@sanity/image-url';
 
 import './index.css';
 
+import ARROW_DOWN from '../../Assets/Icons/arrow-down.svg';
+
 export const Hero = () => {
     const [data, setData] = useState([]);
 
@@ -27,13 +29,18 @@ export const Hero = () => {
         fetchData();
     }, []);
 
-    console.log(data);
-    const backgroundImageUrl = urlFor(data.image.asset._ref).url();
+    console.log(data.text);
+    const backgroundImageUrl = data && data.image && urlFor(data.image.asset._ref).url();
 
     return (
         <>
             <section className='hero' style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
-
+                {data && data.text && (
+                    <h1>{data.text}</h1>
+                )}
+                <div className='arrow-down-container'>
+                    <img className='arrow-down' src={ARROW_DOWN} />
+                </div>
             </section>
         </>
     )
