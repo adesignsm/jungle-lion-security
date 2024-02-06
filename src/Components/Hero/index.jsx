@@ -29,12 +29,9 @@ export const Hero = () => {
         fetchData();
     }, []);
 
-    console.log(data.text);
-    const backgroundImageUrl = data && data.image && urlFor(data.image.asset._ref).url();
-
     return (
         <>
-            <section className='hero' style={{ backgroundImage: `url(${backgroundImageUrl})` }}>
+            <section className='hero'>
                 {data && data.text && (
                     <h1>{data.text}</h1>
                 )}
