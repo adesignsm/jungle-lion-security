@@ -10,6 +10,15 @@ body, html {
     margin: 0;
 }
 
+h1 {
+    color: #FFC600;
+    font-family: 'Mabry-Pro';
+    font-size: 6em;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 500px;
+}
+
 p, li, span {
     font-family: 'Inter', sans-serif;
 }
