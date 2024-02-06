@@ -6,6 +6,7 @@ import { Header } from "./Components/Header";
 import { QuoteBlock } from "./Components/QuoteBlock";
 import { Hero } from "./Components/Hero";
 import { PostHero } from "./Components/PostHero";
+import { Services } from "./Components/Services";
 
 export const App = () => {
     const [data, setData] = useState([]);
@@ -40,6 +41,7 @@ export const App = () => {
                     <QuoteBlock />
                     <Hero />
                     <PostHero />
+                    <Services />
                 </main>
             </Suspense>
         </>
