@@ -4,6 +4,8 @@ import ImageUrlBuilder from '@sanity/image-url';
 
 import './index.css';
 
+import ARROW_DOWN from '../../Assets/Icons/arrow-down.svg';
+
 export const Hero = () => {
     const [data, setData] = useState([]);
 
@@ -36,6 +38,9 @@ export const Hero = () => {
                 {data && data.text && (
                     <h1>{data.text}</h1>
                 )}
+                <div className='arrow-down-container'>
+                    <img className='arrow-down' src={ARROW_DOWN} />
+                </div>
             </section>
         </>
     )
