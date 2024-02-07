@@ -1,17 +1,10 @@
 import { useEffect, useState } from 'react';
 import sanityClient from '../../client';
-import ImageUrlBuilder from '@sanity/image-url';
 
 import './index.css';
 
 export const Services = () => {
     const [data, setData] = useState([]);
-
-    const builder = ImageUrlBuilder(sanityClient);
-
-    const urlFor = (source) => {
-        return builder.image(source);
-    }
 
     const fetchData = async () => {
         try {
@@ -26,8 +19,6 @@ export const Services = () => {
     useEffect(() => {
         fetchData();
     }, []);
-
-    console.log(data);
 
     return (
         <>
