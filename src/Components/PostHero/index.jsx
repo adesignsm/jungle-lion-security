@@ -27,8 +27,6 @@ export const PostHero = () => {
         fetchData();
     }, []);
 
-    // console.log(data);
-
     return (
         <>
             <section className='post-hero'>
