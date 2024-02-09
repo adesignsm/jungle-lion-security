@@ -27,8 +27,6 @@ export const FAQ = () => {
         fetchData();
     }, []);
 
-    console.log(textData);
-
     return (
         <>
             <section id='faq' className='faq'>
