@@ -11,7 +11,7 @@ body, html {
     scroll-behavior: smooth;
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: #FFC600;
     font-family: 'Mabry-Pro';
     font-size: 6em;
