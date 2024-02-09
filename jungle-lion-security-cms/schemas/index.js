@@ -5,6 +5,7 @@ import hero from './hero';
 import postHero from './postHero';
 import services from './services';
 import faq from './faq';
+import marketsSectors from './marketsSectors';
 
 export const schemaTypes = [
     header,
@@ -14,4 +15,5 @@ export const schemaTypes = [
     postHero,
     services,
     faq,
+    marketsSectors,
 ]
