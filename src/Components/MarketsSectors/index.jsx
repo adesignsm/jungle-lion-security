@@ -33,8 +33,6 @@ export const MarketsSectors = () => {
         fetchData();
     }, []);
 
-    console.log(activeTab);
-
     return (
         <>
             <section id='markets-sectors' className='markets-sectors'>

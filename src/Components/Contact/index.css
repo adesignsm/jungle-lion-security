@@ -1,0 +1,64 @@
+.contact {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact .container {
+    border-top: 5px solid #FFC600;
+    border-bottom: 5px solid #FFC600;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+}
+
+.contact .column-one {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.contact .column-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+}
+
+.contact .side-title {
+    color: #fff;
+    transform: rotate(-90deg);
+    font-size: 5em;
+}
+
+.contact .section-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact .section-text h1 {
+    font-size: 6em;
+    max-width: 100%;
+    letter-spacing: -5px;
+    margin: 0;
+}
+
+.contact .contact-button-container button {
+    background-color: #FFC600;
+    padding: 1.5rem 6rem;
+    border: none;
+    border-radius: 10px;
+}
+
+.contact .contact-button-container button a {
+    font-family: 'Mabry-Pro';
+    text-transform: uppercase;
+}
