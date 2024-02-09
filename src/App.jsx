@@ -10,6 +10,7 @@ import { Services } from "./Components/Services";
 import { FAQ } from "./Components/FAQ";
 import { MarketsSectors } from "./Components/MarketsSectors";
 import { Contact } from "./Components/Contact";
+import { Footer } from "./Components/Footer";
 
 export const App = () => {
     const [data, setData] = useState([]);
@@ -48,6 +49,8 @@ export const App = () => {
                     <FAQ />
                     <MarketsSectors />
                     <Contact />
+                    {/*ADD BROWSER ROUTER HERE */}
+                    <Footer />
                 </main>
             </Suspense>
         </>
