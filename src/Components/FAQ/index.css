@@ -1,0 +1,110 @@
+.faq {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.faq .column-one {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.faq .column-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+}
+
+.faq .side-title {
+    color: #fff;
+    transform: rotate(-90deg);
+    font-size: 5em;
+}
+
+.faq .section-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq .section-text h1 {
+    font-size: 8em;
+    max-width: 900px;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #FFC600;
+    letter-spacing: -5px;
+}
+
+.accordion {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+  
+.accordion-item {
+    border-bottom: 3px solid #FFC600;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+  
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding-bottom: 0.5rem;
+    color: #fff;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.accordion-header .question {
+    font-size: xx-large;
+    font-family: 'Mabry-Pro';
+    text-align: center;
+    font-weight: lighter;
+}
+  
+.accordion-content {
+    background-color: transparent;
+    color: #fff;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.accordion-content.active {
+    max-height: 200px;
+    opacity: 1;
+}
+
+.accordion-content .answer {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: 'Mabry-Pro';
+    font-weight: lighter;
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+}
+
+.accordion-icon {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.accordion-icon.minus {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.accordion-icon.plus {
+    transform: rotate(0);
+    transition: transform 0.3s ease-in-out;
+}

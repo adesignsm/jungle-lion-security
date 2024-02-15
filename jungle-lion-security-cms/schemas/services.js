@@ -18,7 +18,7 @@ export default {
                     name: 'sectionTitle',
                     title: 'Section Title',
                     type: 'string',
-                    description: 'The title that will appear in the service section within the home page.'
+                    description: 'The title that will appear on the left side of the service section within the home page.'
                 },
                 {
                     name: 'sectionText',
@@ -38,9 +38,9 @@ export default {
                             type: 'string'
                         },
                         {
-                            name: 'url',
-                            title: 'Button Url',
-                            type: 'url',
+                            name: 'slug',
+                            title: 'Button Slug',
+                            type: 'string',
                         },
                     ]
                 }

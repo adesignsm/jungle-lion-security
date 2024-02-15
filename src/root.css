@@ -5,22 +5,28 @@
 }
 
 body, html {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
-h1 {
+h1, h2, h3 {
     color: #FFC600;
     font-family: 'Mabry-Pro';
     font-size: 6em;
     text-transform: uppercase;
     text-align: center;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 p, li, span {
     font-family: 'Inter', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
 }
 
 .main {
@@ -31,4 +37,15 @@ p, li, span {
 
 section:not(:first-of-type) {
     margin-top: 10rem;
+}
+
+.button {
+    background-color: #FFC600;
+    color: #000;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Mabry-Pro';
+    text-transform: uppercase;
+    font-size: 1em;
+    padding: 2rem;
 }
