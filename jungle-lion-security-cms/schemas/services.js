@@ -45,6 +45,29 @@ export default {
                     ]
                 }
             ]
+        },
+        {
+            name: 'servicesPage',
+            title: 'Services Page',
+            description: 'Update content in the services page',
+            type: 'array',
+            of: [{
+                type: 'object',
+                fields: [
+                    {
+                        name: 'service',
+                        title: 'Service',
+                        type: 'string',
+                        description: 'Add the name of the service',
+                    },
+                    {
+                        name: 'image',
+                        title: 'Service Image',
+                        type: 'image',
+                        description: 'Upload an image to go along with the service',
+                    }
+                ]
+            }]
         }
     ]
 }

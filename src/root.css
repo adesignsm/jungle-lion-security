@@ -9,6 +9,7 @@ body, html {
     width: 100%;
     margin: 0;
     scroll-behavior: smooth;
+
 }
 
 h1, h2, h3 {
@@ -17,7 +18,7 @@ h1, h2, h3 {
     font-size: 6em;
     text-transform: uppercase;
     text-align: center;
-    max-width: 600px;
+    max-width: 800px;
 }
 
 p, li, span {
@@ -33,6 +34,22 @@ a {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+.main::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay color with 50% opacity */
+}
+
+section {
+    position: relative;
+    z-index: 1;
 }
 
 section:not(:first-of-type) {
