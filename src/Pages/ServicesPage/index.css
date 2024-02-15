@@ -1,0 +1,24 @@
+.services-page {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.services-page .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.services-page .title h1 {
+    margin-top: 10rem;
+}
+
+.services-page .title .line {
+    background-color: #FFC600;
+    height: 350px;
+    width: 5px;
+}

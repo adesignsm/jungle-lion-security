@@ -33,7 +33,7 @@ export const Services = () => {
                     <div className='button-container'>
                         {data && data.sectionButton && (
                             <button className='button'>
-                                <a href={data.sectionButton.url}>
+                                <a href={data.sectionButton.slug}>
                                     {data.sectionButton.text}
                                 </a>
                             </button>
