@@ -1,9 +1,8 @@
 .services-page {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .services-page .title {
@@ -11,6 +10,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 10rem;
+    margin-top: 5rem;
 }
 
 .services-page .title h1 {
@@ -21,4 +22,34 @@
     background-color: #FFC600;
     height: 350px;
     width: 5px;
+}
+
+.services-page .services-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-page .services-list h1 {
+    text-align: center;
+    margin-bottom: 10rem;
+}
+
+.services-page .services-list img {
+    width: 50%;
+}
+
+.services-page .services-list .image-container {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.services-page .services-list .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }

@@ -46,8 +46,6 @@ export const Header = () => {
         fetchData();
     }, []);
 
-    console.log(pathname)
-
     return (
         <>
             <header className='header'>

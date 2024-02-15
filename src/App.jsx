@@ -5,6 +5,7 @@ import ImageUrlBuilder from '@sanity/image-url';
 
 import { Header } from "./Components/Header";
 import { Contact } from "./Components/Contact";
+import { QuoteBlock } from "./Components/QuoteBlock";
 import { Footer } from "./Components/Footer";
 
 import { Home } from "./Pages/Home";
@@ -40,6 +41,7 @@ export const App = () => {
             <Suspense>
                 <main className='main' style={{ backgroundImage: `url(${backgroundImageUrl})`}}>
                     <Header />
+                    <QuoteBlock />
                     <BrowserRouter>
                         <Routes>
                             <Route path='/' element={<Home />} />
