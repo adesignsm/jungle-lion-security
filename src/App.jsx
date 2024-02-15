@@ -1,16 +1,14 @@
 import { Suspense, useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import sanityClient from './client';
 import ImageUrlBuilder from '@sanity/image-url';
 
 import { Header } from "./Components/Header";
-import { QuoteBlock } from "./Components/QuoteBlock";
-import { Hero } from "./Components/Hero";
-import { PostHero } from "./Components/PostHero";
-import { Services } from "./Components/Services";
-import { FAQ } from "./Components/FAQ";
-import { MarketsSectors } from "./Components/MarketsSectors";
 import { Contact } from "./Components/Contact";
 import { Footer } from "./Components/Footer";
+
+import { Home } from "./Pages/Home";
+import { ServicesPage } from "./Pages/ServicesPage";
 
 export const App = () => {
     const [data, setData] = useState([]);
@@ -42,14 +40,13 @@ export const App = () => {
             <Suspense>
                 <main className='main' style={{ backgroundImage: `url(${backgroundImageUrl})`}}>
                     <Header />
-                    <QuoteBlock />
-                    <Hero />
-                    <PostHero />
-                    <Services />
-                    <FAQ />
-                    <MarketsSectors />
+                    <BrowserRouter>
+                        <Routes>
+                            <Route path='/' element={<Home />} />
+                            <Route path='/services' element={<ServicesPage />} />
+                        </Routes>
+                    </BrowserRouter>
                     <Contact />
-                    {/*ADD BROWSER ROUTER HERE */}
                     <Footer />
                 </main>
             </Suspense>

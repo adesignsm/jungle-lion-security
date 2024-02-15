@@ -29,8 +29,6 @@ export const Footer = () => {
         fetchData();
     }, []);
 
-    console.log(copyrightData);
-
     return (
         <>
             <footer className='footer'>
