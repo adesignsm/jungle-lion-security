@@ -15,11 +15,5 @@ export default {
             type: 'string',
             description: 'Add, remove, and update the text that appears in the hero section.'
         },
-        {
-            name: 'image',
-            title: 'Hero Background Image',
-            type: 'image',
-            description: 'Upload a background image for the hero section.'
-        }
     ]
 }

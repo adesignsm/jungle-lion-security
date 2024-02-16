@@ -1,0 +1,103 @@
+.markets-sectors {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.markets-sectors .column-one {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.markets-sectors .column-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+}
+
+.markets-sectors .side-title {
+    color: #fff;
+    transform: rotate(-90deg);
+    font-size: 5em;
+}
+
+.markets-sectors .section-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.markets-sectors .section-text h1 {
+    font-size: 6em;
+    max-width: 100%;
+    letter-spacing: -5px;
+}
+
+.markets-sectors .table {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.markets-sectors .table .tabs {
+    display: flex;
+}
+
+.markets-sectors .table .tabs h3 {
+    position: relative;
+    z-index: 0;
+    background-color: #fff;
+    color: #000;
+    padding: 1rem 2rem;
+    margin-bottom: 0;
+    cursor: pointer;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-family: 'Mabry-Pro';
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 2em;
+}
+
+.markets-sectors .table .tabs h3:first-child {
+    position: relative;
+}
+
+.markets-sectors .table .tabs h3:nth-child(2) {
+    margin-left: -1rem;
+}
+
+.markets-sectors .table .tabs .tab.active {
+    background-color: #FFC600;
+    transition: background-color 0.2s ease-in;
+    z-index: 1;
+}
+
+.markets-sectors .table .content {
+    display: flex;
+    border: 5px solid #FFC600;
+    padding: 1rem;
+    min-width: 500px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+}
+
+.markets-sectors .table .content .list {
+    display: none;
+    color: #FFC600;
+}
+
+.markets-sectors .table .content .list ul li {
+    font-size: 1.5em;
+    margin-bottom: .5rem;
+}
+
+.markets-sectors .table .content .list.active {
+    display: block;
+}

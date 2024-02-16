@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import sanityClient from '../../client';
 import ImageUrlBuilder from '@sanity/image-url';
 
 import './index.css';
 
 export const Header = () => {
+    const [pathname] = useState(window.location.href);
     const [leftSideItems, setLeftSideItems] = useState([]);
     const [rightSideItems, setRightSideItems] = useState([]);
     const [logo, setLogo] = useState([]);
@@ -49,7 +51,7 @@ export const Header = () => {
             <header className='header'>
                 <nav>
                     <ul className='left'>
-                        {leftSideItems && (
+                        {leftSideItems && pathname.indexOf('/services') <= -1 && (
                             leftSideItems.map((item) => {
                                 return (
                                     <li key={item._key}>
@@ -62,10 +64,12 @@ export const Header = () => {
                         )}
                     </ul>
                     {logo && logo.asset && (
-                        <img className='logo' src={urlFor(logo.asset._ref).url()} />
+                        <a href='/'>
+                            <img className='logo' src={urlFor(logo.asset._ref).url()} />
+                        </a>
                     )}
                     <ul className='right'>
-                        {rightSideItems && (
+                        {rightSideItems && pathname.indexOf('/services') <= -1 && (
                             rightSideItems.map((item) => {
                                 return (
                                     <li key={item._key}>

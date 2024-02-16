@@ -4,9 +4,7 @@ import ImageUrlBuilder from '@sanity/image-url';
 
 import './index.css';
 
-import ARROW_DOWN from '../../Assets/Icons/arrow-down.svg';
-
-export const Hero = () => {
+export const PostHero = () => {
     const [data, setData] = useState([]);
 
     const builder = ImageUrlBuilder(sanityClient);
@@ -17,7 +15,7 @@ export const Hero = () => {
 
     const fetchData = async () => {
         try {
-            const query = `*[_type == 'hero'][0]`;
+            const query = `*[_type == 'postHero'][0]`;
             const result = await sanityClient.fetch(query);
             setData(result);
         } catch (error) {
@@ -31,12 +29,18 @@ export const Hero = () => {
 
     return (
         <>
-            <section className='hero'>
+            <section className='post-hero'>
                 {data && data.text && (
                     <h1>{data.text}</h1>
                 )}
-                <div className='arrow-down-container'>
-                    <img className='arrow-down' src={ARROW_DOWN} />
+                <div className='clients-container'>
+                    {data && data.clients && data.clients.length > 0 && (
+                        data.clients.map((client) => {
+                            return (
+                                <img key={client._key} src={urlFor(client.clientLogo.asset._ref).url()} />
+                            )
+                        })
+                    )}
                 </div>
             </section>
         </>
