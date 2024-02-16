@@ -15,5 +15,11 @@ export default {
             type: 'string',
             description: 'Add, remove, and update the text that appears in the hero section.'
         },
+        {
+            name: 'logo',
+            title: 'Hero Section Logo',
+            type: 'image',
+            description: '*Note. In order to have your logo render instead of the Hero text, please leave Hero Text empty.'
+        }
     ]
 }

@@ -26,3 +26,7 @@
     max-width: 100px;
     min-width: 50px;
 }
+
+.hero .logo {
+    width: 600px;
+}
