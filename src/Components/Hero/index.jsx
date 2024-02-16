@@ -29,11 +29,16 @@ export const Hero = () => {
         fetchData();
     }, []);
 
+    console.log(data);
+
     return (
         <>
             <section className='hero'>
                 {data && data.text && (
                     <h1>{data.text}</h1>
+                )}
+                {data && data.logo && (
+                    <img className='logo' src={urlFor(data.logo.asset._ref).url()} />
                 )}
                 <div className='arrow-down-container'>
                     <img className='arrow-down' src={ARROW_DOWN} />
