@@ -30,3 +30,14 @@
 .hero .logo {
     width: 600px;
 }
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+    .hero .logo {
+        width: 300px;
+        margin-top: 5rem;
+    }
+
+    .hero .arrow-down-container img {
+        max-width: 50px;
+    }
+}
