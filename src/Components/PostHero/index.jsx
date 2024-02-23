@@ -29,7 +29,7 @@ export const PostHero = () => {
 
     return (
         <>
-            <section className='post-hero'>
+            <section id='about us' className='post-hero'>
                 {data && data.text && (
                     <h1>{data.text}</h1>
                 )}

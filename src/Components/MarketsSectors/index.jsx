@@ -35,7 +35,7 @@ export const MarketsSectors = () => {
 
     return (
         <>
-            <section id='markets-sectors' className='markets-sectors'>
+            <section id='markets' className='markets-sectors'>
                 <div className='section-text'>
                     {title && (<h1>{title}</h1>)}
                 </div>

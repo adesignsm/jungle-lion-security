@@ -17,7 +17,6 @@ export const ServicesPage = () => {
         try {
             const query = `*[_type == 'services'][0]`;
             const result = await sanityClient.fetch(query);
-            console.log(result)
             setData(result.servicesPage);
         } catch (error) {
             console.error(error);
@@ -38,7 +37,6 @@ export const ServicesPage = () => {
                 <div className='services-list'>
                     {data && (
                         data.map((item) => {
-                            console.log(item)
                             return (
                                 <>
                                     <div className='image-container'>

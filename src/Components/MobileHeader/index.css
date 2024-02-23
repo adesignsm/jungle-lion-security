@@ -1,0 +1,80 @@
+.mobile-header {
+    position: fixed;
+    max-height: 100px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 9;
+}
+
+.mobile-header nav {
+    position: relative;
+    z-index: 9;
+    display: flex;
+    width: 800px;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.mobile-header nav a {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.mobile-header nav p {
+    cursor: pointer;
+}
+
+.mobile-header nav img {
+    max-width: 100px;
+}
+
+.mobile-header .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease-in-out;
+}
+
+.show {
+    opacity: 1 !important;
+    pointer-events: all !important;
+}
+
+.mobile-header .menu-overlay ul {
+    height: 100vh;
+    padding-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.mobile-header .menu-overlay ul li {
+    color: #fff;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: xx-large;
+    font-family: 'Mabry-Pro';
+}
+
+.mobile-header .menu-overlay .mobile-apply-button {
+    border: none;
+    color: #FFC600;
+    background-color: transparent;
+    font-family: 'Mabry-Pro';
+    text-transform: uppercase;
+    font-size: xx-large;
+}
