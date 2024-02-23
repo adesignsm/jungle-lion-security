@@ -10,9 +10,11 @@ import { Footer } from "./Components/Footer";
 
 import { Home } from "./Pages/Home";
 import { ServicesPage } from "./Pages/ServicesPage";
+import { MobileHeader } from "./Components/MobileHeader";
 
 export const App = () => {
     const [data, setData] = useState([]);
+    const [width, setWidth] = useState(window.innerWidth);
 
     const builder = ImageUrlBuilder(sanityClient);
 
@@ -40,7 +42,11 @@ export const App = () => {
         <>
             <Suspense>
                 <main className='main' style={{ backgroundImage: `url(${backgroundImageUrl})`}}>
-                    <Header />
+                    {width <= 768 ? (
+                        <MobileHeader />
+                    ) : (
+                        <Header />
+                    )}
                     <QuoteBlock />
                     <BrowserRouter>
                         <Routes>
