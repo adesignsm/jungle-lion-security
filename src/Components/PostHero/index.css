@@ -30,10 +30,11 @@
     width: 150px;
     color: #000;
 }
+
 @media only screen and (min-width: 375px) and (max-width: 768px) {
     .post-hero h1 {
         font-size: 2em;
-        padding: 1.5rem;
+        padding: 1rem;
         margin-bottom: 5rem;
     }
 }
