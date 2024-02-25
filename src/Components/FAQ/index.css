@@ -108,3 +108,19 @@
     transform: rotate(0);
     transition: transform 0.3s ease-in-out;
 }
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+    .faq .column-one {
+        display: none;
+    }
+    
+    .faq .column-two {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .faq .column-two .section-text h1 {
+        font-size: 4rem;
+        transform: scale(0.8);
+    }
+}
