@@ -62,3 +62,39 @@
     font-weight: normal;
     margin-top: 0
 }
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+    .footer .content {
+        flex-direction: column;
+    }
+
+    .footer .content .logo-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer .content .logo-container img {
+        width: 350px;
+    }
+
+    .footer .content .content-container h1 {
+        text-align: center;
+        font-size: 1.6em;
+    }
+
+    .footer .content .content-container h3 {
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .footer .copyright-section {
+        width: auto;
+        align-items: flex-start;
+    }
+
+    .footer .copyright-section h3 {
+        text-align: left;
+        font-size: 1em;
+        max-width: 200px;
+    }
+}
