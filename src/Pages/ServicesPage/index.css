@@ -36,10 +36,6 @@
     margin-bottom: 10rem;
 }
 
-.services-page .services-list img {
-    width: 50%;
-}
-
 .services-page .services-list .image-container {
     width: 400px;
     height: 400px;
@@ -52,4 +48,27 @@
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+    .services-page .title h1 {
+        font-size: 3em;
+        margin-top: 5rem;
+    }
+
+    .services-page .title .line {
+        height: 200px;
+    }
+
+    .services-page .services-list .image-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .services-page .services-list h1 {
+        font-size: 2em;
+        width: fit-content;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
 }
