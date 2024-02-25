@@ -62,3 +62,30 @@
     font-family: 'Mabry-Pro';
     text-transform: uppercase;
 }
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+    .contact {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .contact .container {
+        width: auto;
+        padding: 0;
+    }
+
+    .contact .container .section-text {
+        margin-top: 1rem;
+    }
+
+    .contact .container .section-text h1 {
+        font-size: 4rem;
+        transform: scale(0.8);
+        white-space: nowrap;
+    }
+
+    .contact .container .contact-button-container {
+        margin-bottom: 2.5rem;
+        margin-top: 1rem;
+    }
+}
