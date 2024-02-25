@@ -6,6 +6,7 @@ import './index.css';
 
 export const PostHero = () => {
     const [data, setData] = useState([]);
+    const [width] = useState(window.innerWidth);
 
     const builder = ImageUrlBuilder(sanityClient);
 
@@ -34,12 +35,20 @@ export const PostHero = () => {
                     <h1>{data.text}</h1>
                 )}
                 <div className='clients-container'>
-                    {data && data.clients && data.clients.length > 0 && (
+                    {data && data.clients && data.clients.length > 0 && width > 768 ? (
                         data.clients.map((client) => {
                             return (
                                 <img key={client._key} src={urlFor(client.clientLogo.asset._ref).url()} />
                             )
                         })
+                    ) : (
+                        <marquee className='marquee' scrollamount="3" scrolldelay="100">
+                            {data.clients.map((client) => {
+                                return (
+                                    <img key={client._key} src={urlFor(client.clientLogo.asset._ref).url()} />
+                                )
+                            })}
+                        </marquee>
                     )}
                 </div>
             </section>

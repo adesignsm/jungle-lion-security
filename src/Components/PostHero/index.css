@@ -37,4 +37,8 @@
         padding: 1rem;
         margin-bottom: 5rem;
     }
+
+    .marquee img {
+        margin-right: 3rem;
+    }
 }
