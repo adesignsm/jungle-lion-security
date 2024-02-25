@@ -43,7 +43,7 @@ export const PostHero = () => {
                         })
                     ) : (
                         <marquee className='marquee' scrollamount="3" scrolldelay="100">
-                            {data.clients.map((client) => {
+                            {data && data.clients && data.clients.map((client) => {
                                 return (
                                     <img key={client._key} src={urlFor(client.clientLogo.asset._ref).url()} />
                                 )
