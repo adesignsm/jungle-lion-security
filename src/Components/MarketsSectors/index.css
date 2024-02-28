@@ -106,6 +106,7 @@
     .markets-sectors .section-text h1 {
         font-size: 4rem;
         transform: scale(0.8);
+        word-break: break-all;
     }
 
     .mobile-table {
